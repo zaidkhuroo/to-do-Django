@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+# from django.http import HttpResponse
 from django.contrib import messages
 
 # import todo form and models
@@ -24,7 +25,7 @@ def index(request):
 		"list": item_list,
 		"title": "TODO LIST",
 	}
-	return render(request, 'todo/index.html', page)
+	return render(request, "todo/index.html", page)
 
 
 ### function to remove item, it receive todo item_id as primary key from url ##

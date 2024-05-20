@@ -48,7 +48,9 @@ text-overflow: ellipsis;
 </head>
 
 <body class="container-fluid">
+	<!--  This is an if template tag. It checks if there are any messages to display. -->
 {% if messages %}
+<!-- This is a for template tag. It iterates over the messages context variable, displaying each message. -->
 {% for message in messages %}
 <div class="alert alert-info">
 	<strong>{{message}}</strong>
@@ -85,6 +87,7 @@ text-overflow: ellipsis;
 	<div class="col-md-5" >
 	<div class="submit_form">
 	<form method="POST">
+		<!--  This template tag inserts a CSRF (Cross-Site Request Forgery) token into the form. This is a security feature to protect against CSRF attacks. -->
 		{% csrf_token %}
 		{{forms}}
 		<center>

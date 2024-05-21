@@ -26,6 +26,7 @@ def index(request):
     form = todoform()
 
 	 # Creates a context dictionary with the form, list of To-Do items, and a title.
+    # Creates a context dictionary with the form, list of To-Do items, and a title.
     page = {
         "forms": form,  # 'forms' is a key and 'form' is a variable that represents an instance of the TodoForm.
         "list": item_list,  # 'item_list' is a variable that contains a list of todo items.
